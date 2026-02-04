@@ -58,7 +58,14 @@ const translations = {
         "message.sent": "Message envoyé avec succès!",
         "checkout.thanks": "Merci pour votre commande!",
         "checkout.total": "Total:",
-        "checkout.delivery": "Nous vous contacterons pour la livraison."
+        "checkout.delivery": "Nous vous contacterons pour la livraison.",
+
+        // Modal
+        "modal.add": "Ajouter au panier",
+        "modal.flowers": "Fleurs incluses",
+        "modal.duration": "Durée de vie",
+        "modal.days": "7-10 jours",
+        "modal.delivery": "Livraison express disponible"
     },
     en: {
         // Navigation
@@ -118,7 +125,14 @@ const translations = {
         "message.sent": "Message sent successfully!",
         "checkout.thanks": "Thank you for your order!",
         "checkout.total": "Total:",
-        "checkout.delivery": "We will contact you for delivery."
+        "checkout.delivery": "We will contact you for delivery.",
+
+        // Modal
+        "modal.add": "Add to cart",
+        "modal.flowers": "Included flowers",
+        "modal.duration": "Lifespan",
+        "modal.days": "7-10 days",
+        "modal.delivery": "Express delivery available"
     }
 };
 
@@ -129,6 +143,8 @@ const products = {
             id: 1,
             name: "Bouquet Romantique",
             description: "Roses rouges et pivoines pour les grandes occasions",
+            fullDescription: "Un bouquet passionné composé de magnifiques roses rouges et de pivoines délicates. Parfait pour exprimer votre amour lors d'un anniversaire, de la Saint-Valentin ou simplement pour surprendre l'être aimé.",
+            flowers: "Roses rouges, Pivoines, Eucalyptus",
             price: 45.00,
             emoji: "🌹"
         },
@@ -136,6 +152,8 @@ const products = {
             id: 2,
             name: "Fraîcheur Printanière",
             description: "Tulipes colorées et marguerites champêtres",
+            fullDescription: "Célébrez l'arrivée du printemps avec ce bouquet joyeux. Les tulipes aux couleurs variées s'associent parfaitement aux marguerites pour créer une composition pleine de vie et de fraîcheur.",
+            flowers: "Tulipes multicolores, Marguerites, Gypsophile",
             price: 35.00,
             emoji: "🌷"
         },
@@ -143,6 +161,8 @@ const products = {
             id: 3,
             name: "Soleil d'Or",
             description: "Tournesols lumineux pour égayer votre journée",
+            fullDescription: "Apportez la chaleur du soleil dans votre intérieur avec ce bouquet radieux. Les tournesols, symboles de bonheur et de loyauté, illumineront n'importe quelle pièce de leur éclat doré.",
+            flowers: "Tournesols, Solidago, Feuillage vert",
             price: 38.00,
             emoji: "🌻"
         },
@@ -150,6 +170,8 @@ const products = {
             id: 4,
             name: "Élégance Blanche",
             description: "Lys et orchidées blanches, pureté et raffinement",
+            fullDescription: "L'incarnation de l'élégance et de la sophistication. Ce bouquet raffiné de lys et d'orchidées blanches est idéal pour les mariages, les cérémonies ou pour offrir à quelqu'un de spécial.",
+            flowers: "Lys blancs, Orchidées Phalaenopsis, Roses blanches",
             price: 55.00,
             emoji: "🌺"
         },
@@ -157,6 +179,8 @@ const products = {
             id: 5,
             name: "Jardin Sauvage",
             description: "Composition champêtre de fleurs des champs",
+            fullDescription: "Évadez-vous à la campagne avec ce bouquet naturel et authentique. Une composition libre et aérée qui rappelle les prairies fleuries et les beaux jours d'été.",
+            flowers: "Marguerites, Bleuets, Coquelicots, Graminées",
             price: 32.00,
             emoji: "🌼"
         },
@@ -164,6 +188,8 @@ const products = {
             id: 6,
             name: "Passion Tropicale",
             description: "Hibiscus et fleurs exotiques aux couleurs vives",
+            fullDescription: "Voyagez sous les tropiques avec cette explosion de couleurs. Des fleurs exotiques soigneusement sélectionnées pour créer une ambiance chaleureuse et dépaysante.",
+            flowers: "Hibiscus, Strelitzia, Anthurium, Feuilles tropicales",
             price: 48.00,
             emoji: "🌸"
         },
@@ -171,6 +197,8 @@ const products = {
             id: 7,
             name: "Douceur Pastel",
             description: "Roses et hortensias aux teintes délicates",
+            fullDescription: "Un bouquet tout en douceur avec ses teintes pastel apaisantes. Les roses se marient harmonieusement aux hortensias pour créer une composition romantique et délicate.",
+            flowers: "Roses roses, Hortensias, Lisianthus, Eucalyptus",
             price: 42.00,
             emoji: "💐"
         },
@@ -178,6 +206,8 @@ const products = {
             id: 8,
             name: "Forêt Enchantée",
             description: "Fougères et fleurs vertes pour un intérieur zen",
+            fullDescription: "Créez une atmosphère apaisante avec ce bouquet inspiré de la nature. Un mélange harmonieux de verdure et de textures qui apportera sérénité et fraîcheur à votre espace.",
+            flowers: "Fougères, Eucalyptus, Hellébores vertes, Mousse",
             price: 40.00,
             emoji: "🌿"
         }
@@ -187,6 +217,8 @@ const products = {
             id: 1,
             name: "Romantic Bouquet",
             description: "Red roses and peonies for special occasions",
+            fullDescription: "A passionate bouquet composed of magnificent red roses and delicate peonies. Perfect for expressing your love on an anniversary, Valentine's Day, or simply to surprise your beloved.",
+            flowers: "Red roses, Peonies, Eucalyptus",
             price: 45.00,
             emoji: "🌹"
         },
@@ -194,6 +226,8 @@ const products = {
             id: 2,
             name: "Spring Freshness",
             description: "Colorful tulips and country daisies",
+            fullDescription: "Celebrate the arrival of spring with this joyful bouquet. The colorful tulips pair perfectly with daisies to create a composition full of life and freshness.",
+            flowers: "Multicolored tulips, Daisies, Baby's breath",
             price: 35.00,
             emoji: "🌷"
         },
@@ -201,6 +235,8 @@ const products = {
             id: 3,
             name: "Golden Sun",
             description: "Bright sunflowers to brighten your day",
+            fullDescription: "Bring the warmth of the sun into your home with this radiant bouquet. Sunflowers, symbols of happiness and loyalty, will illuminate any room with their golden glow.",
+            flowers: "Sunflowers, Solidago, Green foliage",
             price: 38.00,
             emoji: "🌻"
         },
@@ -208,6 +244,8 @@ const products = {
             id: 4,
             name: "White Elegance",
             description: "White lilies and orchids, purity and refinement",
+            fullDescription: "The embodiment of elegance and sophistication. This refined bouquet of white lilies and orchids is ideal for weddings, ceremonies, or to offer to someone special.",
+            flowers: "White lilies, Phalaenopsis orchids, White roses",
             price: 55.00,
             emoji: "🌺"
         },
@@ -215,6 +253,8 @@ const products = {
             id: 5,
             name: "Wild Garden",
             description: "Country-style composition of wildflowers",
+            fullDescription: "Escape to the countryside with this natural and authentic bouquet. A free and airy composition reminiscent of flowering meadows and beautiful summer days.",
+            flowers: "Daisies, Cornflowers, Poppies, Grasses",
             price: 32.00,
             emoji: "🌼"
         },
@@ -222,6 +262,8 @@ const products = {
             id: 6,
             name: "Tropical Passion",
             description: "Hibiscus and exotic flowers in vivid colors",
+            fullDescription: "Travel to the tropics with this explosion of colors. Carefully selected exotic flowers to create a warm and exotic atmosphere.",
+            flowers: "Hibiscus, Bird of paradise, Anthurium, Tropical leaves",
             price: 48.00,
             emoji: "🌸"
         },
@@ -229,6 +271,8 @@ const products = {
             id: 7,
             name: "Pastel Softness",
             description: "Roses and hydrangeas in delicate shades",
+            fullDescription: "A gentle bouquet with its soothing pastel tones. Roses blend harmoniously with hydrangeas to create a romantic and delicate composition.",
+            flowers: "Pink roses, Hydrangeas, Lisianthus, Eucalyptus",
             price: 42.00,
             emoji: "💐"
         },
@@ -236,6 +280,8 @@ const products = {
             id: 8,
             name: "Enchanted Forest",
             description: "Ferns and green flowers for a zen interior",
+            fullDescription: "Create a soothing atmosphere with this nature-inspired bouquet. A harmonious blend of greenery and textures that will bring serenity and freshness to your space.",
+            flowers: "Ferns, Eucalyptus, Green hellebores, Moss",
             price: 40.00,
             emoji: "🌿"
         }
@@ -291,26 +337,78 @@ function t(key) {
     return translations[currentLang][key] || key;
 }
 
+// Current modal product
+let currentModalProductId = null;
+
 // Render Products
 function renderProducts() {
     const grid = document.getElementById('products-grid');
     const currentProducts = products[currentLang];
 
     grid.innerHTML = currentProducts.map(product => `
-        <article class="product-card">
+        <article class="product-card" onclick="openModal(${product.id})">
             <div class="product-image">${product.emoji}</div>
             <div class="product-info">
                 <h3 class="product-name">${product.name}</h3>
                 <p class="product-description">${product.description}</p>
                 <div class="product-footer">
                     <span class="product-price">${formatPrice(product.price)}</span>
-                    <button class="add-to-cart" onclick="addToCart(${product.id})">
+                    <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(${product.id})">
                         ${t('products.add')}
                     </button>
                 </div>
             </div>
         </article>
     `).join('');
+}
+
+// Open Product Modal
+function openModal(productId) {
+    const product = products[currentLang].find(p => p.id === productId);
+    if (!product) return;
+
+    currentModalProductId = productId;
+
+    document.getElementById('modal-image').textContent = product.emoji;
+    document.getElementById('modal-title').textContent = product.name;
+    document.getElementById('modal-description').textContent = product.fullDescription;
+    document.getElementById('modal-price').textContent = formatPrice(product.price);
+    document.getElementById('modal-add-btn').textContent = t('modal.add');
+
+    document.getElementById('modal-info').innerHTML = `
+        <div class="modal-info-item">
+            <span>💐</span>
+            <strong>${t('modal.flowers')}:</strong> ${product.flowers}
+        </div>
+        <div class="modal-info-item">
+            <span>⏱️</span>
+            <strong>${t('modal.duration')}:</strong> ${t('modal.days')}
+        </div>
+        <div class="modal-info-item">
+            <span>🚚</span>
+            ${t('modal.delivery')}
+        </div>
+    `;
+
+    document.getElementById('modal-overlay').classList.add('active');
+    document.getElementById('product-modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Close Modal
+function closeModal() {
+    document.getElementById('modal-overlay').classList.remove('active');
+    document.getElementById('product-modal').classList.remove('active');
+    document.body.style.overflow = '';
+    currentModalProductId = null;
+}
+
+// Add to Cart from Modal
+function addToCartFromModal() {
+    if (currentModalProductId) {
+        addToCart(currentModalProductId);
+        closeModal();
+    }
 }
 
 // Format Price
@@ -468,4 +566,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+        const cartSidebar = document.getElementById('cart-sidebar');
+        if (cartSidebar.classList.contains('active')) {
+            toggleCart();
+        }
+    }
 });
