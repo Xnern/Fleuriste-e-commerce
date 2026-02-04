@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleurs & Jardins - Votre fleuriste en ligne</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🌸</span>
+                <span class="logo-text">Fleurs & Jardins</span>
+            </a>
+            <nav class="nav">
+                <a href="#accueil" data-i18n="nav.home">Accueil</a>
+                <a href="#produits" data-i18n="nav.flowers">Nos Fleurs</a>
+                <a href="#about" data-i18n="nav.about">À Propos</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" onclick="setLanguage('fr')">FR</button>
+                    <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+                </div>
+                <button class="cart-btn" onclick="toggleCart()">
+                    <span class="cart-icon">🛒</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Des fleurs pour chaque moment</h1>
+            <p data-i18n="hero.subtitle">Découvrez notre collection de bouquets artisanaux, créés avec passion et livrés avec amour.</p>
+            <a href="#produits" class="btn btn-primary" data-i18n="hero.cta">Découvrir nos fleurs</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <span class="feature-icon">🚚</span>
+                <h3 data-i18n="features.delivery.title">Livraison Express</h3>
+                <p data-i18n="features.delivery.desc">Livraison le jour même pour toute commande avant 14h</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🌿</span>
+                <h3 data-i18n="features.fresh.title">Fleurs Fraîches</h3>
+                <p data-i18n="features.fresh.desc">Nos fleurs sont cueillies et livrées sous 24h</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">💝</span>
+                <h3 data-i18n="features.message.title">Message Personnalisé</h3>
+                <p data-i18n="features.message.desc">Ajoutez un message gratuit à votre bouquet</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produits" class="products">
+        <div class="container">
+            <h2 class="section-title" data-i18n="products.title">Nos Bouquets</h2>
+            <p class="section-subtitle" data-i18n="products.subtitle">Des créations florales uniques pour illuminer votre quotidien</p>
+
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be inserted by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-i18n="about.title">Notre Passion</h2>
+                    <p data-i18n="about.text1">Depuis plus de 20 ans, Fleurs & Jardins est votre artisan fleuriste de confiance. Nous sélectionnons chaque jour les plus belles fleurs auprès de producteurs locaux pour créer des compositions uniques.</p>
+                    <p data-i18n="about.text2">Notre équipe passionnée met tout son savoir-faire au service de vos émotions. Que ce soit pour un anniversaire, un mariage ou simplement pour faire plaisir, nous avons le bouquet parfait pour vous.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-img-placeholder">🌺</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact.title">Contactez-nous</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <h4 data-i18n="contact.address">Adresse</h4>
+                            <p>123 Rue des Fleurs, 75001 Paris</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4 data-i18n="contact.phone">Téléphone</h4>
+                            <p>01 23 45 67 89</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@fleurs-jardins.fr</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <h4 data-i18n="contact.hours">Horaires</h4>
+                            <p data-i18n="contact.hours.value">Lun-Sam: 9h-19h</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleContactForm(event)">
+                    <input type="text" data-i18n-placeholder="contact.form.name" placeholder="Votre nom" required>
+                    <input type="email" data-i18n-placeholder="contact.form.email" placeholder="Votre email" required>
+                    <textarea data-i18n-placeholder="contact.form.message" placeholder="Votre message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.form.send">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>🌸 Fleurs & Jardins</h4>
+                    <p data-i18n="footer.description">Votre fleuriste artisanal depuis 2004. Des fleurs fraîches et des créations uniques pour tous vos moments précieux.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.quicklinks">Liens Rapides</h4>
+                    <a href="#accueil" data-i18n="nav.home">Accueil</a>
+                    <a href="#produits" data-i18n="nav.flowers">Nos Fleurs</a>
+                    <a href="#about" data-i18n="nav.about">À Propos</a>
+                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.followus">Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">&copy; 2024 Fleurs & Jardins. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3 data-i18n="cart.title">Votre Panier</h3>
+            <button class="cart-close" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-i18n="cart.total">Total:</span>
+                <span id="cart-total">0,00 €</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="checkout()" data-i18n="cart.checkout">Commander</button>
+        </div>
+    </aside>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
