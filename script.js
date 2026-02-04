@@ -66,7 +66,15 @@ const translations = {
             "message.sent": "Message envoyé avec succès!",
             "checkout.thanks": "Merci pour votre commande!",
             "checkout.total": "Total:",
-            "checkout.delivery": "Nous vous contacterons pour la livraison."
+            "checkout.delivery": "Nous vous contacterons pour la livraison.",
+
+            // Checkout Modal
+            "checkout.modal.title": "Finaliser la commande",
+            "checkout.confirm": "Confirmer la commande",
+            "checkout.name": "Nom complet",
+            "checkout.email": "Email",
+            "checkout.phone": "Téléphone",
+            "checkout.address": "Adresse de livraison"
         },
         dark: {
             // Navigation
@@ -132,7 +140,15 @@ const translations = {
             "message.sent": "Message crypté envoyé!",
             "checkout.thanks": "Merci pour votre confiance!",
             "checkout.total": "Total:",
-            "checkout.delivery": "Notre pigeon voyageur vous contactera."
+            "checkout.delivery": "Notre pigeon voyageur vous contactera.",
+
+            // Checkout Modal
+            "checkout.modal.title": "Finaliser la commande",
+            "checkout.confirm": "Confirmer la commande",
+            "checkout.name": "Pseudo / Nom de code",
+            "checkout.email": "Email sécurisé",
+            "checkout.phone": "Signal / Telegram",
+            "checkout.address": "Point de rendez-vous"
         }
     },
     en: {
@@ -201,7 +217,15 @@ const translations = {
             "message.sent": "Message sent successfully!",
             "checkout.thanks": "Thank you for your order!",
             "checkout.total": "Total:",
-            "checkout.delivery": "We will contact you for delivery."
+            "checkout.delivery": "We will contact you for delivery.",
+
+            // Checkout Modal
+            "checkout.modal.title": "Complete your order",
+            "checkout.confirm": "Confirm order",
+            "checkout.name": "Full name",
+            "checkout.email": "Email",
+            "checkout.phone": "Phone",
+            "checkout.address": "Delivery address"
         },
         dark: {
             // Navigation
@@ -267,7 +291,15 @@ const translations = {
             "message.sent": "Encrypted message sent!",
             "checkout.thanks": "Thank you for your trust!",
             "checkout.total": "Total:",
-            "checkout.delivery": "Our carrier pigeon will contact you."
+            "checkout.delivery": "Our carrier pigeon will contact you.",
+
+            // Checkout Modal
+            "checkout.modal.title": "Complete your order",
+            "checkout.confirm": "Confirm order",
+            "checkout.name": "Alias / Code name",
+            "checkout.email": "Secure email",
+            "checkout.phone": "Signal / Telegram",
+            "checkout.address": "Meeting point"
         }
     }
 };
@@ -894,12 +926,67 @@ function showToast(message) {
     setTimeout(() => toast.classList.remove('active'), 3000);
 }
 
-// Checkout
-async function checkout() {
+// Checkout - Open modal
+function checkout() {
     if (cart.length === 0) {
         showToast(t('cart.empty'));
         return;
     }
+    openCheckoutModal();
+}
+
+// Open Checkout Modal
+function openCheckoutModal() {
+    const currentProducts = getCurrentProducts();
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+    // Build summary
+    const summaryHTML = cart.map(item => {
+        const product = currentProducts.find(p => p.id === item.id);
+        return `
+            <div class="checkout-item">
+                <div>
+                    <div class="checkout-item-name">${product ? product.name : 'Produit'}</div>
+                    <div class="checkout-item-details">x${item.quantity}</div>
+                </div>
+                <div class="checkout-item-details">${formatPrice(item.price * item.quantity)}</div>
+            </div>
+        `;
+    }).join('');
+
+    document.getElementById('checkout-summary').innerHTML = summaryHTML;
+    document.getElementById('checkout-total-display').textContent = formatPrice(total);
+
+    // Update placeholders
+    document.getElementById('checkout-name').placeholder = t('checkout.name');
+    document.getElementById('checkout-email').placeholder = t('checkout.email');
+    document.getElementById('checkout-phone').placeholder = t('checkout.phone');
+    document.getElementById('checkout-address').placeholder = t('checkout.address');
+
+    document.getElementById('checkout-overlay').classList.add('active');
+    document.getElementById('checkout-modal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Close cart sidebar
+    document.getElementById('cart-sidebar').classList.remove('active');
+    document.getElementById('cart-overlay').classList.remove('active');
+}
+
+// Close Checkout Modal
+function closeCheckoutModal() {
+    document.getElementById('checkout-overlay').classList.remove('active');
+    document.getElementById('checkout-modal').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Confirm Order
+async function confirmOrder(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('checkout-name').value;
+    const email = document.getElementById('checkout-email').value;
+    const phone = document.getElementById('checkout-phone').value;
+    const address = document.getElementById('checkout-address').value;
 
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const currentProducts = getCurrentProducts();
@@ -919,6 +1006,10 @@ async function checkout() {
         title: `${orderEmoji} Nouvelle Commande - ${shopName}`,
         color: currentTheme === 'dark' ? 0x4ade80 : 0xe8a4b8,
         fields: [
+            { name: '👤 Client', value: name, inline: true },
+            { name: '📧 Email', value: email, inline: true },
+            { name: '📞 Téléphone', value: phone, inline: true },
+            { name: '📍 Adresse', value: address },
             { name: '🛒 Articles', value: orderItems },
             { name: '💰 Total', value: `**${formatPrice(total)}**`, inline: true },
             { name: '📦 Nb articles', value: `${cart.reduce((sum, item) => sum + item.quantity, 0)}`, inline: true }
@@ -937,12 +1028,12 @@ async function checkout() {
         console.error('Webhook error:', error);
     }
 
-    alert(`${t('checkout.thanks')}\n\n${t('checkout.total')} ${formatPrice(total)}\n\n${t('checkout.delivery')}`);
+    closeCheckoutModal();
+    showToast(t('checkout.thanks'));
 
     cart = [];
     saveCart();
     updateCartUI();
-    toggleCart();
 }
 
 // Handle Contact Form
@@ -1000,6 +1091,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeModal();
+        closeCheckoutModal();
         const cartSidebar = document.getElementById('cart-sidebar');
         if (cartSidebar.classList.contains('active')) {
             toggleCart();
