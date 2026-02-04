@@ -679,9 +679,9 @@ function isValidEmail(email) {
 
 // Security: Get webhook URL (light obfuscation)
 function getWebhookUrl() {
-    const parts = ['aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkv', 'd2ViaG9va3MvMTQ2ODU5NzUwMzk3NTc1', 'MTc2NS9iNFJzQ0JZdGhhRmlsQlRFaXZN', 'c1JLbUo4cmxCLUphYzRzcURGRFRrSFk5', 'WjlaRUV6a0tRUnk4WjRoOUo1LWVyMjB1OQ=='];
+    const encoded = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTQ2ODU5NzUwMzk3NTc1MTc2NS9iNFJzQ0JZdGhhRmlsQlRFaXZNc1JLbUo4cmxCLUphYzRzcURGRFRrSFk5WjlFRXp4a0tRUnk4WjRoOUo1LWVyMjB1OQ==';
     try {
-        return atob(parts.join(''));
+        return atob(encoded);
     } catch(e) {
         return null;
     }
