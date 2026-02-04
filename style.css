@@ -761,7 +761,7 @@ input:checked + .slider:before {
     max-width: 900px;
     width: 90%;
     max-height: 90vh;
-    overflow: hidden;
+    overflow-y: auto;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition);
