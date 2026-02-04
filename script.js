@@ -435,7 +435,7 @@ const productsDark = {
             info1: "Relaxation, Euphorie, Fringales incontrôlables",
             info2: "2-4 heures de bonheur",
             price: 45.00,
-            image: "https://images.unsplash.com/photo-1603909223429-69bb7101f420?w=500"
+            image: "https://images.unsplash.com/photo-1503262028195-93c528f03218?w=500"
         },
         {
             id: 102,
@@ -445,7 +445,7 @@ const productsDark = {
             info1: "Énergie infinie, Confiance absolue, Mâchoire qui bouge",
             info2: "30-60 min (puis repeat)",
             price: 120.00,
-            image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
+            image: "https://images.unsplash.com/photo-1581093458791-9d42e3c2fd45?w=500"
         },
         {
             id: 103,
@@ -455,7 +455,7 @@ const productsDark = {
             info1: "Amour universel, Envie de danser, Discussions profondes",
             info2: "4-6 heures de love",
             price: 35.00,
-            image: "https://images.unsplash.com/photo-1519638399535-1b036603ac77?w=500"
+            image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500"
         },
         {
             id: 104,
@@ -465,7 +465,7 @@ const productsDark = {
             info1: "Hallucinations, Révélations cosmiques, Murs qui respirent",
             info2: "8-12 heures d'aventure",
             price: 25.00,
-            image: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=500"
+            image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=500"
         },
         {
             id: 105,
@@ -475,7 +475,7 @@ const productsDark = {
             info1: "Connexion nature, Fous rires, Visions mystiques",
             info2: "4-6 heures de magie",
             price: 40.00,
-            image: "https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?w=500"
+            image: "https://images.unsplash.com/photo-1515686811547-3b4b68339219?w=500"
         },
         {
             id: 106,
@@ -485,7 +485,7 @@ const productsDark = {
             info1: "Dissociation, K-hole possible, Gravité optionnelle",
             info2: "1-2 heures hors du corps",
             price: 55.00,
-            image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500"
+            image: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=500"
         },
         {
             id: 107,
@@ -495,7 +495,7 @@ const productsDark = {
             info1: "Béatitude totale, Monde extérieur inexistant",
             info2: "4-5 heures de néant",
             price: 80.00,
-            image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500"
+            image: "https://images.unsplash.com/photo-1560717799-5090c6b5d0a7?w=500"
         },
         {
             id: 108,
@@ -505,7 +505,7 @@ const productsDark = {
             info1: "Énergie surhumaine, Productivité maniaque, Paranoïa créative",
             info2: "12-24 heures (minimum)",
             price: 150.00,
-            image: "https://images.unsplash.com/photo-1530685932526-48ec92998eaa?w=500"
+            image: "https://images.unsplash.com/photo-1610552050890-fe99536c2615?w=500"
         }
     ],
     en: [
@@ -517,7 +517,7 @@ const productsDark = {
             info1: "Relaxation, Euphoria, Uncontrollable munchies",
             info2: "2-4 hours of happiness",
             price: 45.00,
-            image: "https://images.unsplash.com/photo-1603909223429-69bb7101f420?w=500"
+            image: "https://images.unsplash.com/photo-1503262028195-93c528f03218?w=500"
         },
         {
             id: 102,
@@ -527,7 +527,7 @@ const productsDark = {
             info1: "Infinite energy, Absolute confidence, Jaw movements",
             info2: "30-60 min (then repeat)",
             price: 120.00,
-            image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
+            image: "https://images.unsplash.com/photo-1581093458791-9d42e3c2fd45?w=500"
         },
         {
             id: 103,
@@ -537,7 +537,7 @@ const productsDark = {
             info1: "Universal love, Urge to dance, Deep conversations",
             info2: "4-6 hours of love",
             price: 35.00,
-            image: "https://images.unsplash.com/photo-1519638399535-1b036603ac77?w=500"
+            image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500"
         },
         {
             id: 104,
@@ -547,7 +547,7 @@ const productsDark = {
             info1: "Hallucinations, Cosmic revelations, Breathing walls",
             info2: "8-12 hours of adventure",
             price: 25.00,
-            image: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=500"
+            image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=500"
         },
         {
             id: 105,
@@ -557,7 +557,7 @@ const productsDark = {
             info1: "Nature connection, Giggles, Mystical visions",
             info2: "4-6 hours of magic",
             price: 40.00,
-            image: "https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?w=500"
+            image: "https://images.unsplash.com/photo-1515686811547-3b4b68339219?w=500"
         },
         {
             id: 106,
@@ -567,7 +567,7 @@ const productsDark = {
             info1: "Dissociation, K-hole possible, Gravity optional",
             info2: "1-2 hours out of body",
             price: 55.00,
-            image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500"
+            image: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?w=500"
         },
         {
             id: 107,
@@ -577,7 +577,7 @@ const productsDark = {
             info1: "Total bliss, Outside world nonexistent",
             info2: "4-5 hours of void",
             price: 80.00,
-            image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500"
+            image: "https://images.unsplash.com/photo-1560717799-5090c6b5d0a7?w=500"
         },
         {
             id: 108,
@@ -587,7 +587,7 @@ const productsDark = {
             info1: "Superhuman energy, Manic productivity, Creative paranoia",
             info2: "12-24 hours (minimum)",
             price: 150.00,
-            image: "https://images.unsplash.com/photo-1530685932526-48ec92998eaa?w=500"
+            image: "https://images.unsplash.com/photo-1610552050890-fe99536c2615?w=500"
         }
     ]
 };
