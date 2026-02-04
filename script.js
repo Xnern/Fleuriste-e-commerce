@@ -445,7 +445,7 @@ const productsDark = {
             info1: "Énergie infinie, Confiance absolue, Mâchoire qui bouge",
             info2: "30-60 min (puis repeat)",
             price: 120.00,
-            image: "https://images.unsplash.com/photo-1581093458791-9d42e3c2fd45?w=500"
+            image: "https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=500"
         },
         {
             id: 103,
@@ -455,7 +455,7 @@ const productsDark = {
             info1: "Amour universel, Envie de danser, Discussions profondes",
             info2: "4-6 heures de love",
             price: 35.00,
-            image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500"
+            image: "https://images.unsplash.com/photo-1533709752211-118fcaf03312?w=500"
         },
         {
             id: 104,
@@ -475,7 +475,7 @@ const productsDark = {
             info1: "Connexion nature, Fous rires, Visions mystiques",
             info2: "4-6 heures de magie",
             price: 40.00,
-            image: "https://images.unsplash.com/photo-1515686811547-3b4b68339219?w=500"
+            image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500"
         },
         {
             id: 106,
@@ -495,7 +495,7 @@ const productsDark = {
             info1: "Béatitude totale, Monde extérieur inexistant",
             info2: "4-5 heures de néant",
             price: 80.00,
-            image: "https://images.unsplash.com/photo-1560717799-5090c6b5d0a7?w=500"
+            image: "https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=500"
         },
         {
             id: 108,
@@ -527,7 +527,7 @@ const productsDark = {
             info1: "Infinite energy, Absolute confidence, Jaw movements",
             info2: "30-60 min (then repeat)",
             price: 120.00,
-            image: "https://images.unsplash.com/photo-1581093458791-9d42e3c2fd45?w=500"
+            image: "https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?w=500"
         },
         {
             id: 103,
@@ -537,7 +537,7 @@ const productsDark = {
             info1: "Universal love, Urge to dance, Deep conversations",
             info2: "4-6 hours of love",
             price: 35.00,
-            image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=500"
+            image: "https://images.unsplash.com/photo-1533709752211-118fcaf03312?w=500"
         },
         {
             id: 104,
@@ -557,7 +557,7 @@ const productsDark = {
             info1: "Nature connection, Giggles, Mystical visions",
             info2: "4-6 hours of magic",
             price: 40.00,
-            image: "https://images.unsplash.com/photo-1515686811547-3b4b68339219?w=500"
+            image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500"
         },
         {
             id: 106,
@@ -577,7 +577,7 @@ const productsDark = {
             info1: "Total bliss, Outside world nonexistent",
             info2: "4-5 hours of void",
             price: 80.00,
-            image: "https://images.unsplash.com/photo-1560717799-5090c6b5d0a7?w=500"
+            image: "https://images.unsplash.com/photo-1457530378978-8bac673b8062?w=500"
         },
         {
             id: 108,
