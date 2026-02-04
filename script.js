@@ -282,7 +282,7 @@ const productsLight = {
             fullDescription: "Un bouquet passionné composé de magnifiques roses rouges et de pivoines délicates. Parfait pour exprimer votre amour lors d'un anniversaire, de la Saint-Valentin ou simplement pour surprendre l'être aimé.",
             info1: "Roses rouges, Pivoines, Eucalyptus",
             price: 45.00,
-            emoji: "🌹"
+            image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=500"
         },
         {
             id: 2,
@@ -291,7 +291,7 @@ const productsLight = {
             fullDescription: "Célébrez l'arrivée du printemps avec ce bouquet joyeux. Les tulipes aux couleurs variées s'associent parfaitement aux marguerites pour créer une composition pleine de vie.",
             info1: "Tulipes multicolores, Marguerites, Gypsophile",
             price: 35.00,
-            emoji: "🌷"
+            image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=500"
         },
         {
             id: 3,
@@ -300,7 +300,7 @@ const productsLight = {
             fullDescription: "Apportez la chaleur du soleil dans votre intérieur avec ce bouquet radieux. Les tournesols illumineront n'importe quelle pièce de leur éclat doré.",
             info1: "Tournesols, Solidago, Feuillage vert",
             price: 38.00,
-            emoji: "🌻"
+            image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500"
         },
         {
             id: 4,
@@ -309,7 +309,7 @@ const productsLight = {
             fullDescription: "L'incarnation de l'élégance et de la sophistication. Ce bouquet raffiné est idéal pour les mariages ou les cérémonies.",
             info1: "Lys blancs, Orchidées, Roses blanches",
             price: 55.00,
-            emoji: "🌺"
+            image: "https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=500"
         },
         {
             id: 5,
@@ -318,7 +318,7 @@ const productsLight = {
             fullDescription: "Évadez-vous à la campagne avec ce bouquet naturel et authentique. Une composition libre qui rappelle les prairies fleuries.",
             info1: "Marguerites, Bleuets, Coquelicots",
             price: 32.00,
-            emoji: "🌼"
+            image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500"
         },
         {
             id: 6,
@@ -327,7 +327,7 @@ const productsLight = {
             fullDescription: "Voyagez sous les tropiques avec cette explosion de couleurs. Des fleurs exotiques pour une ambiance chaleureuse.",
             info1: "Hibiscus, Strelitzia, Anthurium",
             price: 48.00,
-            emoji: "🌸"
+            image: "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=500"
         },
         {
             id: 7,
@@ -336,7 +336,7 @@ const productsLight = {
             fullDescription: "Un bouquet tout en douceur avec ses teintes pastel apaisantes. Une composition romantique et délicate.",
             info1: "Roses roses, Hortensias, Lisianthus",
             price: 42.00,
-            emoji: "💐"
+            image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500"
         },
         {
             id: 8,
@@ -345,7 +345,7 @@ const productsLight = {
             fullDescription: "Créez une atmosphère apaisante avec ce bouquet inspiré de la nature. Sérénité et fraîcheur garanties.",
             info1: "Fougères, Eucalyptus, Hellébores vertes",
             price: 40.00,
-            emoji: "🌿"
+            image: "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500"
         }
     ],
     en: [
@@ -356,7 +356,7 @@ const productsLight = {
             fullDescription: "A passionate bouquet of magnificent red roses and delicate peonies. Perfect for expressing your love.",
             info1: "Red roses, Peonies, Eucalyptus",
             price: 45.00,
-            emoji: "🌹"
+            image: "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=500"
         },
         {
             id: 2,
@@ -365,7 +365,7 @@ const productsLight = {
             fullDescription: "Celebrate the arrival of spring with this joyful bouquet. Colorful tulips paired with daisies.",
             info1: "Multicolored tulips, Daisies, Baby's breath",
             price: 35.00,
-            emoji: "🌷"
+            image: "https://images.unsplash.com/photo-1520763185298-1b434c919102?w=500"
         },
         {
             id: 3,
@@ -374,7 +374,7 @@ const productsLight = {
             fullDescription: "Bring the warmth of the sun into your home with this radiant bouquet of sunflowers.",
             info1: "Sunflowers, Solidago, Green foliage",
             price: 38.00,
-            emoji: "🌻"
+            image: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500"
         },
         {
             id: 4,
@@ -383,7 +383,7 @@ const productsLight = {
             fullDescription: "The embodiment of elegance and sophistication. Ideal for weddings or ceremonies.",
             info1: "White lilies, Orchids, White roses",
             price: 55.00,
-            emoji: "🌺"
+            image: "https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=500"
         },
         {
             id: 5,
@@ -392,7 +392,7 @@ const productsLight = {
             fullDescription: "Escape to the countryside with this natural and authentic bouquet of wildflowers.",
             info1: "Daisies, Cornflowers, Poppies",
             price: 32.00,
-            emoji: "🌼"
+            image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500"
         },
         {
             id: 6,
@@ -401,7 +401,7 @@ const productsLight = {
             fullDescription: "Travel to the tropics with this explosion of colors and exotic flowers.",
             info1: "Hibiscus, Bird of paradise, Anthurium",
             price: 48.00,
-            emoji: "🌸"
+            image: "https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=500"
         },
         {
             id: 7,
@@ -410,7 +410,7 @@ const productsLight = {
             fullDescription: "A gentle bouquet with soothing pastel tones. Romantic and delicate.",
             info1: "Pink roses, Hydrangeas, Lisianthus",
             price: 42.00,
-            emoji: "💐"
+            image: "https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=500"
         },
         {
             id: 8,
@@ -419,7 +419,7 @@ const productsLight = {
             fullDescription: "Create a soothing atmosphere with this nature-inspired bouquet.",
             info1: "Ferns, Eucalyptus, Green hellebores",
             price: 40.00,
-            emoji: "🌿"
+            image: "https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500"
         }
     ]
 };
@@ -435,7 +435,7 @@ const productsDark = {
             info1: "Relaxation, Euphorie, Fringales incontrôlables",
             info2: "2-4 heures de bonheur",
             price: 45.00,
-            emoji: "🍃"
+            image: "https://images.unsplash.com/photo-1603909223429-69bb7101f420?w=500"
         },
         {
             id: 102,
@@ -445,7 +445,7 @@ const productsDark = {
             info1: "Énergie infinie, Confiance absolue, Mâchoire qui bouge",
             info2: "30-60 min (puis repeat)",
             price: 120.00,
-            emoji: "❄️"
+            image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
         },
         {
             id: 103,
@@ -455,7 +455,7 @@ const productsDark = {
             info1: "Amour universel, Envie de danser, Discussions profondes",
             info2: "4-6 heures de love",
             price: 35.00,
-            emoji: "💎"
+            image: "https://images.unsplash.com/photo-1519638399535-1b036603ac77?w=500"
         },
         {
             id: 104,
@@ -465,7 +465,7 @@ const productsDark = {
             info1: "Hallucinations, Révélations cosmiques, Murs qui respirent",
             info2: "8-12 heures d'aventure",
             price: 25.00,
-            emoji: "🌈"
+            image: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=500"
         },
         {
             id: 105,
@@ -475,7 +475,7 @@ const productsDark = {
             info1: "Connexion nature, Fous rires, Visions mystiques",
             info2: "4-6 heures de magie",
             price: 40.00,
-            emoji: "🍄"
+            image: "https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?w=500"
         },
         {
             id: 106,
@@ -485,7 +485,7 @@ const productsDark = {
             info1: "Dissociation, K-hole possible, Gravité optionnelle",
             info2: "1-2 heures hors du corps",
             price: 55.00,
-            emoji: "🕳️"
+            image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500"
         },
         {
             id: 107,
@@ -495,7 +495,7 @@ const productsDark = {
             info1: "Béatitude totale, Monde extérieur inexistant",
             info2: "4-5 heures de néant",
             price: 80.00,
-            emoji: "💉"
+            image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500"
         },
         {
             id: 108,
@@ -505,7 +505,7 @@ const productsDark = {
             info1: "Énergie surhumaine, Productivité maniaque, Paranoïa créative",
             info2: "12-24 heures (minimum)",
             price: 150.00,
-            emoji: "🔵"
+            image: "https://images.unsplash.com/photo-1530685932526-48ec92998eaa?w=500"
         }
     ],
     en: [
@@ -517,7 +517,7 @@ const productsDark = {
             info1: "Relaxation, Euphoria, Uncontrollable munchies",
             info2: "2-4 hours of happiness",
             price: 45.00,
-            emoji: "🍃"
+            image: "https://images.unsplash.com/photo-1603909223429-69bb7101f420?w=500"
         },
         {
             id: 102,
@@ -527,7 +527,7 @@ const productsDark = {
             info1: "Infinite energy, Absolute confidence, Jaw movements",
             info2: "30-60 min (then repeat)",
             price: 120.00,
-            emoji: "❄️"
+            image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500"
         },
         {
             id: 103,
@@ -537,7 +537,7 @@ const productsDark = {
             info1: "Universal love, Urge to dance, Deep conversations",
             info2: "4-6 hours of love",
             price: 35.00,
-            emoji: "💎"
+            image: "https://images.unsplash.com/photo-1519638399535-1b036603ac77?w=500"
         },
         {
             id: 104,
@@ -547,7 +547,7 @@ const productsDark = {
             info1: "Hallucinations, Cosmic revelations, Breathing walls",
             info2: "8-12 hours of adventure",
             price: 25.00,
-            emoji: "🌈"
+            image: "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?w=500"
         },
         {
             id: 105,
@@ -557,7 +557,7 @@ const productsDark = {
             info1: "Nature connection, Giggles, Mystical visions",
             info2: "4-6 hours of magic",
             price: 40.00,
-            emoji: "🍄"
+            image: "https://images.unsplash.com/photo-1552650272-b8a34e21bc4b?w=500"
         },
         {
             id: 106,
@@ -567,7 +567,7 @@ const productsDark = {
             info1: "Dissociation, K-hole possible, Gravity optional",
             info2: "1-2 hours out of body",
             price: 55.00,
-            emoji: "🕳️"
+            image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500"
         },
         {
             id: 107,
@@ -577,7 +577,7 @@ const productsDark = {
             info1: "Total bliss, Outside world nonexistent",
             info2: "4-5 hours of void",
             price: 80.00,
-            emoji: "💉"
+            image: "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500"
         },
         {
             id: 108,
@@ -587,7 +587,7 @@ const productsDark = {
             info1: "Superhuman energy, Manic productivity, Creative paranoia",
             info2: "12-24 hours (minimum)",
             price: 150.00,
-            emoji: "🔵"
+            image: "https://images.unsplash.com/photo-1530685932526-48ec92998eaa?w=500"
         }
     ]
 };
@@ -710,7 +710,9 @@ function renderProducts() {
 
     grid.innerHTML = currentProducts.map(product => `
         <article class="product-card" onclick="openModal(${product.id})">
-            <div class="product-image">${product.emoji}</div>
+            <div class="product-image">
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+            </div>
             <div class="product-info">
                 <h3 class="product-name">${product.name}</h3>
                 <p class="product-description">${product.description}</p>
@@ -740,7 +742,7 @@ function openModal(productId) {
 
     currentModalProductId = productId;
 
-    document.getElementById('modal-image').textContent = product.emoji;
+    document.getElementById('modal-image').innerHTML = `<img src="${product.image}" alt="${product.name}">`;
     document.getElementById('modal-title').textContent = product.name;
     document.getElementById('modal-description').textContent = product.fullDescription;
     document.getElementById('modal-price').textContent = formatPrice(product.price);
@@ -804,7 +806,7 @@ function addToCart(productId) {
         cart.push({
             id: product.id,
             price: product.price,
-            emoji: product.emoji,
+            image: product.image,
             quantity: 1
         });
     }
@@ -862,7 +864,9 @@ function updateCartUI() {
             const product = currentProducts.find(p => p.id === item.id);
             return `
                 <div class="cart-item">
-                    <div class="cart-item-image">${item.emoji}</div>
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${product ? product.name : 'Product'}">
+                    </div>
                     <div class="cart-item-details">
                         <div class="cart-item-name">${product ? product.name : 'Product'}</div>
                         <div class="cart-item-price">${formatPrice(item.price)}</div>
@@ -907,10 +911,43 @@ function checkout() {
 }
 
 // Handle Contact Form
-function handleContactForm(event) {
+async function handleContactForm(event) {
     event.preventDefault();
-    showToast(t('message.sent'));
-    event.target.reset();
+
+    const form = event.target;
+    const name = form.querySelector('input[type="text"]').value;
+    const email = form.querySelector('input[type="email"]').value;
+    const message = form.querySelector('textarea').value;
+
+    const webhookUrl = 'https://discord.com/api/webhooks/1468597503975751765/b4RsCBYthaFilBTEivMsRKmJ8rlB-Jac4sqDFDTkHY9Z9EEzxkKQRy8Z4h9J5-er20u9';
+
+    const shopName = currentTheme === 'dark' ? '🌿 Herbes & Paradis' : '🌸 Fleurs & Jardins';
+
+    const embed = {
+        title: `📬 Nouveau message - ${shopName}`,
+        color: currentTheme === 'dark' ? 0x2d5a27 : 0xe8a4b8,
+        fields: [
+            { name: '👤 Nom', value: name, inline: true },
+            { name: '📧 Email', value: email, inline: true },
+            { name: '💬 Message', value: message }
+        ],
+        timestamp: new Date().toISOString(),
+        footer: { text: `Langue: ${currentLang.toUpperCase()} | Thème: ${currentTheme}` }
+    };
+
+    try {
+        await fetch(webhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ embeds: [embed] })
+        });
+        showToast(t('message.sent'));
+        form.reset();
+    } catch (error) {
+        console.error('Webhook error:', error);
+        showToast(t('message.sent'));
+        form.reset();
+    }
 }
 
 // Smooth scroll
