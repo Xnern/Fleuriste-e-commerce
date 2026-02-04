@@ -135,6 +135,63 @@ h1, h2, h3, h4 {
     gap: 20px;
 }
 
+/* Theme Switcher */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-label {
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.switch {
+    position: relative;
+    width: 50px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--primary) 0%, #f8b4c4 100%);
+    transition: var(--transition);
+    border-radius: 26px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: var(--transition);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+    background: linear-gradient(135deg, #2d5a27 0%, #1a3d1a 100%);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
 .lang-switcher {
     display: flex;
     gap: 5px;
@@ -350,52 +407,6 @@ h1, h2, h3, h4 {
 .add-to-cart:hover {
     background: var(--primary-dark);
     transform: scale(1.05);
-}
-
-/* Drugs Section */
-.drugs-section {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-}
-
-.drugs-section .section-title,
-.drugs-section .section-subtitle {
-    color: #fff;
-}
-
-.drugs-section .section-subtitle {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.drugs-section .product-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.drugs-section .product-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-}
-
-.drugs-section .product-image {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-}
-
-.drugs-section .product-name,
-.drugs-section .product-price {
-    color: #fff;
-}
-
-.drugs-section .product-description {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.drugs-section .add-to-cart {
-    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
-}
-
-.drugs-section .add-to-cart:hover {
-    background: linear-gradient(135deg, #ff6b6b 0%, #e94560 100%);
 }
 
 /* About Section */
@@ -861,6 +872,304 @@ h1, h2, h3, h4 {
     .modal-details {
         padding: 25px;
     }
+}
+
+/* ==================== DARK THEME ==================== */
+body.dark-theme {
+    --primary: #2d5a27;
+    --primary-dark: #1a3d1a;
+    --secondary: #4ade80;
+    --accent: #1a1a2e;
+    --dark: #e0e0e0;
+    --light: #0f0f1a;
+    --white: #1a1a2e;
+}
+
+body.dark-theme .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .logo-text,
+body.dark-theme .nav a {
+    color: #e0e0e0;
+}
+
+body.dark-theme .nav a:hover {
+    color: #4ade80;
+}
+
+body.dark-theme .lang-switcher {
+    background: rgba(255,255,255,0.1);
+}
+
+body.dark-theme .lang-btn {
+    color: #e0e0e0;
+}
+
+body.dark-theme .lang-btn.active {
+    background: #2d5a27;
+}
+
+body.dark-theme .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+body.dark-theme .hero h1 {
+    color: #fff;
+    text-shadow: 0 0 30px rgba(74, 222, 128, 0.3);
+}
+
+body.dark-theme .hero p {
+    color: rgba(255,255,255,0.7);
+}
+
+body.dark-theme .features {
+    background: #16213e;
+}
+
+body.dark-theme .feature h3 {
+    color: #4ade80;
+}
+
+body.dark-theme .feature p {
+    color: rgba(255,255,255,0.6);
+}
+
+body.dark-theme .products {
+    background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+}
+
+body.dark-theme .section-title {
+    color: #fff;
+}
+
+body.dark-theme .section-subtitle {
+    color: rgba(255,255,255,0.6);
+}
+
+body.dark-theme .product-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .product-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(74, 222, 128, 0.3);
+    box-shadow: 0 8px 30px rgba(74, 222, 128, 0.15);
+}
+
+body.dark-theme .product-image {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+body.dark-theme .product-name {
+    color: #fff;
+}
+
+body.dark-theme .product-description {
+    color: rgba(255,255,255,0.5);
+}
+
+body.dark-theme .product-price {
+    color: #4ade80;
+}
+
+body.dark-theme .add-to-cart {
+    background: linear-gradient(135deg, #2d5a27 0%, #4ade80 100%);
+}
+
+body.dark-theme .add-to-cart:hover {
+    background: linear-gradient(135deg, #4ade80 0%, #2d5a27 100%);
+}
+
+body.dark-theme .about {
+    background: #16213e;
+}
+
+body.dark-theme .about-text h2 {
+    color: #4ade80;
+}
+
+body.dark-theme .about-text p {
+    color: rgba(255,255,255,0.7);
+}
+
+body.dark-theme .about-img-placeholder {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+}
+
+body.dark-theme .contact {
+    background: #0f0f1a;
+}
+
+body.dark-theme .contact .section-title {
+    color: #fff;
+}
+
+body.dark-theme .contact-item h4 {
+    color: #4ade80;
+}
+
+body.dark-theme .contact-item p {
+    color: rgba(255,255,255,0.7);
+}
+
+body.dark-theme .contact-form input,
+body.dark-theme .contact-form textarea {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+body.dark-theme .contact-form input::placeholder,
+body.dark-theme .contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+body.dark-theme .contact-form input:focus,
+body.dark-theme .contact-form textarea:focus {
+    border-color: #4ade80;
+}
+
+body.dark-theme .footer {
+    background: #0a0a12;
+}
+
+body.dark-theme .footer-section h4 {
+    color: #4ade80;
+}
+
+body.dark-theme .footer-section p,
+body.dark-theme .footer-section a {
+    color: rgba(255,255,255,0.6);
+}
+
+body.dark-theme .footer-section a:hover {
+    color: #4ade80;
+}
+
+body.dark-theme .footer-bottom {
+    color: rgba(255,255,255,0.4);
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-theme .cart-sidebar {
+    background: #1a1a2e;
+}
+
+body.dark-theme .cart-header {
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-theme .cart-header h3 {
+    color: #fff;
+}
+
+body.dark-theme .cart-close {
+    color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-theme .cart-item {
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-theme .cart-item-image {
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-theme .cart-item-name {
+    color: #fff;
+}
+
+body.dark-theme .cart-item-price {
+    color: #4ade80;
+}
+
+body.dark-theme .qty-btn {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+body.dark-theme .qty-btn:hover {
+    background: #4ade80;
+    border-color: #4ade80;
+}
+
+body.dark-theme .cart-footer {
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-theme .cart-total {
+    color: #fff;
+}
+
+body.dark-theme .cart-empty {
+    color: rgba(255,255,255,0.5);
+}
+
+body.dark-theme .cart-item-quantity span {
+    color: #fff;
+}
+
+body.dark-theme .modal {
+    background: #1a1a2e;
+}
+
+body.dark-theme .modal-close {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+body.dark-theme .modal-image {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+}
+
+body.dark-theme .modal-title {
+    color: #fff;
+}
+
+body.dark-theme .modal-description {
+    color: rgba(255,255,255,0.7);
+}
+
+body.dark-theme .modal-info {
+    background: rgba(255,255,255,0.05);
+}
+
+body.dark-theme .modal-info-item {
+    color: rgba(255,255,255,0.8);
+}
+
+body.dark-theme .modal-price {
+    color: #4ade80;
+}
+
+body.dark-theme .toast {
+    background: #4ade80;
+    color: #0f0f1a;
+}
+
+body.dark-theme .btn-primary {
+    background: linear-gradient(135deg, #2d5a27 0%, #4ade80 100%);
+    color: #fff;
+}
+
+body.dark-theme .btn-primary:hover {
+    background: linear-gradient(135deg, #4ade80 0%, #2d5a27 100%);
+}
+
+body.dark-theme .btn-secondary {
+    background: #4ade80;
+    color: #0f0f1a;
+}
+
+body.dark-theme .cart-count {
+    background: #4ade80;
+    color: #0f0f1a;
 }
 
 /* Responsive */
