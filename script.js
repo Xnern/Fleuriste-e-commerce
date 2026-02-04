@@ -4,6 +4,7 @@ const translations = {
         // Navigation
         "nav.home": "Accueil",
         "nav.flowers": "Nos Fleurs",
+        "nav.drugs": "Drogues",
         "nav.about": "À Propos",
         "nav.contact": "Contact",
 
@@ -24,6 +25,13 @@ const translations = {
         "products.title": "Nos Bouquets",
         "products.subtitle": "Des créations florales uniques pour illuminer votre quotidien",
         "products.add": "Ajouter",
+
+        // Drugs
+        "drugs.title": "Nos Substances Spéciales",
+        "drugs.subtitle": "Pour les moments où les fleurs ne suffisent plus...",
+        "drugs.effects": "Effets",
+        "drugs.duration": "Durée des effets",
+        "drugs.warning": "⚠️ Consommation à vos risques",
 
         // About
         "about.title": "Notre Passion",
@@ -71,6 +79,7 @@ const translations = {
         // Navigation
         "nav.home": "Home",
         "nav.flowers": "Our Flowers",
+        "nav.drugs": "Drugs",
         "nav.about": "About Us",
         "nav.contact": "Contact",
 
@@ -91,6 +100,13 @@ const translations = {
         "products.title": "Our Bouquets",
         "products.subtitle": "Unique floral creations to brighten your day",
         "products.add": "Add to cart",
+
+        // Drugs
+        "drugs.title": "Our Special Substances",
+        "drugs.subtitle": "For when flowers just aren't enough...",
+        "drugs.effects": "Effects",
+        "drugs.duration": "Duration",
+        "drugs.warning": "⚠️ Consume at your own risk",
 
         // About
         "about.title": "Our Passion",
@@ -288,6 +304,174 @@ const products = {
     ]
 };
 
+// Drugs Data (bilingual)
+const drugs = {
+    fr: [
+        {
+            id: 101,
+            name: "Café Triple Dose",
+            description: "Pour ceux qui ne dorment jamais",
+            fullDescription: "Un expresso surpuissant capable de réveiller les morts. Parfait pour les nuits blanches de révision ou les lundis matins difficiles. Attention: peut provoquer des palpitations et une productivité excessive.",
+            effects: "Énergie x1000, Insomnie garantie, Tremblements",
+            duration: "6-8 heures de chaos",
+            price: 15.00,
+            emoji: "☕"
+        },
+        {
+            id: 102,
+            name: "Chocolat du Bonheur",
+            description: "Endorphines pures en tablette",
+            fullDescription: "Du chocolat noir 99% cacao importé directement de Suisse. Chaque carré libère une dose massive d'endorphines. Effet secondaire: vous ne pourrez plus jamais manger du chocolat normal.",
+            effects: "Euphorie intense, Addiction immédiate, Sourire permanent",
+            duration: "Jusqu'à la prochaine tablette",
+            price: 25.00,
+            emoji: "🍫"
+        },
+        {
+            id: 103,
+            name: "Sucre Raffiné Premium",
+            description: "La poudre blanche légale",
+            fullDescription: "Du sucre glace de la plus haute qualité. Se consomme pur pour les vrais amateurs ou dilué dans un café. Le dealer de votre dentiste vous remerciera.",
+            effects: "Hyperactivité, Crash énergétique, Caries",
+            duration: "30 min de folie puis dépression",
+            price: 8.00,
+            emoji: "🍬"
+        },
+        {
+            id: 104,
+            name: "Thé Matcha Hallucinant",
+            description: "La zénitude poussée à l'extrême",
+            fullDescription: "Un matcha si concentré qu'il vous transportera dans une autre dimension. Les moines zen l'utilisent pour atteindre l'illumination. Vous, vous l'utiliserez pour survivre aux réunions.",
+            effects: "Calme suspect, Méditation forcée, Urine verte",
+            duration: "3-4 heures de paix intérieure",
+            price: 35.00,
+            emoji: "🍵"
+        },
+        {
+            id: 105,
+            name: "Red Bull par Palettes",
+            description: "Des ailes... et des insomnies",
+            fullDescription: "Pourquoi une canette quand on peut avoir une palette entière? Idéal pour les gamers, les étudiants en période d'exams, et tous ceux qui considèrent le sommeil comme optionnel.",
+            effects: "Ailes fictives, Tachycardie, Invincibilité temporaire",
+            duration: "Toute la nuit et plus",
+            price: 199.00,
+            emoji: "🥤"
+        },
+        {
+            id: 106,
+            name: "Fromage Addictif",
+            description: "La casomorphine naturelle",
+            fullDescription: "Du fromage affiné contenant des niveaux records de casomorphine, l'opioïde naturel du lait. Une fois que vous commencez, vous ne pouvez plus vous arrêter. Littéralement.",
+            effects: "Addiction fromagère, Bonheur lactique, Constipation",
+            duration: "Permanent (c'est une addiction)",
+            price: 45.00,
+            emoji: "🧀"
+        },
+        {
+            id: 107,
+            name: "Série Netflix Illimitée",
+            description: "La drogue dure du 21e siècle",
+            fullDescription: "Un abonnement Netflix premium avec toutes les séries addictives. Inclut: perte de notion du temps, yeux rouges, et l'excuse 'encore un épisode'. Votre lit ne vous remerciera pas.",
+            effects: "Binge-watching compulsif, Vie sociale détruite, 'Juste un épisode'",
+            duration: "Jusqu'à 4h du matin minimum",
+            price: 17.99,
+            emoji: "📺"
+        },
+        {
+            id: 108,
+            name: "Wifi Fibre Illimité",
+            description: "La dépendance moderne",
+            fullDescription: "Une connexion internet ultra-rapide qui vous gardera connecté 24/7. Sans elle, vous ressentirez des symptômes de sevrage incluant anxiété, désorientation et conversations réelles avec des humains.",
+            effects: "Dépendance totale, FOMO chronique, Pouce hypertrophié",
+            duration: "Toute votre vie",
+            price: 49.99,
+            emoji: "📶"
+        }
+    ],
+    en: [
+        {
+            id: 101,
+            name: "Triple Shot Coffee",
+            description: "For those who never sleep",
+            fullDescription: "An overpowered espresso capable of waking the dead. Perfect for all-night study sessions or rough Monday mornings. Warning: may cause palpitations and excessive productivity.",
+            effects: "Energy x1000, Guaranteed insomnia, Shaking",
+            duration: "6-8 hours of chaos",
+            price: 15.00,
+            emoji: "☕"
+        },
+        {
+            id: 102,
+            name: "Happiness Chocolate",
+            description: "Pure endorphins in bar form",
+            fullDescription: "99% dark chocolate imported directly from Switzerland. Each square releases a massive dose of endorphins. Side effect: you'll never be able to eat normal chocolate again.",
+            effects: "Intense euphoria, Immediate addiction, Permanent smile",
+            duration: "Until the next bar",
+            price: 25.00,
+            emoji: "🍫"
+        },
+        {
+            id: 103,
+            name: "Premium Refined Sugar",
+            description: "The legal white powder",
+            fullDescription: "The highest quality powdered sugar. Consumed pure by true connoisseurs or diluted in coffee. Your dentist's dealer will thank you.",
+            effects: "Hyperactivity, Energy crash, Cavities",
+            duration: "30 min of madness then depression",
+            price: 8.00,
+            emoji: "🍬"
+        },
+        {
+            id: 104,
+            name: "Hallucinogenic Matcha Tea",
+            description: "Extreme zen vibes",
+            fullDescription: "A matcha so concentrated it will transport you to another dimension. Zen monks use it to reach enlightenment. You'll use it to survive meetings.",
+            effects: "Suspicious calm, Forced meditation, Green urine",
+            duration: "3-4 hours of inner peace",
+            price: 35.00,
+            emoji: "🍵"
+        },
+        {
+            id: 105,
+            name: "Red Bull by the Pallet",
+            description: "Wings... and insomnia",
+            fullDescription: "Why one can when you can have a whole pallet? Ideal for gamers, students during exams, and anyone who considers sleep optional.",
+            effects: "Fictional wings, Tachycardia, Temporary invincibility",
+            duration: "All night and more",
+            price: 199.00,
+            emoji: "🥤"
+        },
+        {
+            id: 106,
+            name: "Addictive Cheese",
+            description: "Natural casomorphin",
+            fullDescription: "Aged cheese containing record levels of casomorphin, milk's natural opioid. Once you start, you can't stop. Literally.",
+            effects: "Cheese addiction, Dairy happiness, Constipation",
+            duration: "Permanent (it's an addiction)",
+            price: 45.00,
+            emoji: "🧀"
+        },
+        {
+            id: 107,
+            name: "Unlimited Netflix Series",
+            description: "The hard drug of the 21st century",
+            fullDescription: "A premium Netflix subscription with all addictive series. Includes: loss of time perception, red eyes, and the 'just one more episode' excuse. Your bed won't thank you.",
+            effects: "Compulsive binge-watching, Destroyed social life, 'Just one episode'",
+            duration: "Until 4am minimum",
+            price: 17.99,
+            emoji: "📺"
+        },
+        {
+            id: 108,
+            name: "Unlimited Fiber Wifi",
+            description: "The modern addiction",
+            fullDescription: "An ultra-fast internet connection that will keep you connected 24/7. Without it, you'll experience withdrawal symptoms including anxiety, disorientation, and actual conversations with humans.",
+            effects: "Total dependence, Chronic FOMO, Hypertrophied thumb",
+            duration: "Your entire life",
+            price: 49.99,
+            emoji: "📶"
+        }
+    ]
+};
+
 // Current Language
 let currentLang = localStorage.getItem('lang') || 'fr';
 
@@ -327,8 +511,9 @@ function setLanguage(lang) {
         }
     });
 
-    // Re-render products and cart
+    // Re-render products, drugs and cart
     renderProducts();
+    renderDrugs();
     updateCartUI();
 }
 
@@ -339,6 +524,7 @@ function t(key) {
 
 // Current modal product
 let currentModalProductId = null;
+let currentModalProductType = 'flower';
 
 // Render Products
 function renderProducts() {
@@ -362,12 +548,36 @@ function renderProducts() {
     `).join('');
 }
 
+// Render Drugs
+function renderDrugs() {
+    const grid = document.getElementById('drugs-grid');
+    const currentDrugs = drugs[currentLang];
+
+    grid.innerHTML = currentDrugs.map(drug => `
+        <article class="product-card" onclick="openModal(${drug.id}, 'drug')">
+            <div class="product-image">${drug.emoji}</div>
+            <div class="product-info">
+                <h3 class="product-name">${drug.name}</h3>
+                <p class="product-description">${drug.description}</p>
+                <div class="product-footer">
+                    <span class="product-price">${formatPrice(drug.price)}</span>
+                    <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(${drug.id}, 'drug')">
+                        ${t('products.add')}
+                    </button>
+                </div>
+            </div>
+        </article>
+    `).join('');
+}
+
 // Open Product Modal
-function openModal(productId) {
-    const product = products[currentLang].find(p => p.id === productId);
+function openModal(productId, type = 'flower') {
+    const dataSource = type === 'drug' ? drugs : products;
+    const product = dataSource[currentLang].find(p => p.id === productId);
     if (!product) return;
 
     currentModalProductId = productId;
+    currentModalProductType = type;
 
     document.getElementById('modal-image').textContent = product.emoji;
     document.getElementById('modal-title').textContent = product.name;
@@ -375,20 +585,39 @@ function openModal(productId) {
     document.getElementById('modal-price').textContent = formatPrice(product.price);
     document.getElementById('modal-add-btn').textContent = t('modal.add');
 
-    document.getElementById('modal-info').innerHTML = `
-        <div class="modal-info-item">
-            <span>💐</span>
-            <strong>${t('modal.flowers')}:</strong> ${product.flowers}
-        </div>
-        <div class="modal-info-item">
-            <span>⏱️</span>
-            <strong>${t('modal.duration')}:</strong> ${t('modal.days')}
-        </div>
-        <div class="modal-info-item">
-            <span>🚚</span>
-            ${t('modal.delivery')}
-        </div>
-    `;
+    let infoHTML = '';
+    if (type === 'drug') {
+        infoHTML = `
+            <div class="modal-info-item">
+                <span>⚡</span>
+                <strong>${t('drugs.effects')}:</strong> ${product.effects}
+            </div>
+            <div class="modal-info-item">
+                <span>⏱️</span>
+                <strong>${t('drugs.duration')}:</strong> ${product.duration}
+            </div>
+            <div class="modal-info-item">
+                <span>⚠️</span>
+                ${t('drugs.warning')}
+            </div>
+        `;
+    } else {
+        infoHTML = `
+            <div class="modal-info-item">
+                <span>💐</span>
+                <strong>${t('modal.flowers')}:</strong> ${product.flowers}
+            </div>
+            <div class="modal-info-item">
+                <span>⏱️</span>
+                <strong>${t('modal.duration')}:</strong> ${t('modal.days')}
+            </div>
+            <div class="modal-info-item">
+                <span>🚚</span>
+                ${t('modal.delivery')}
+            </div>
+        `;
+    }
+    document.getElementById('modal-info').innerHTML = infoHTML;
 
     document.getElementById('modal-overlay').classList.add('active');
     document.getElementById('product-modal').classList.add('active');
@@ -406,7 +635,7 @@ function closeModal() {
 // Add to Cart from Modal
 function addToCartFromModal() {
     if (currentModalProductId) {
-        addToCart(currentModalProductId);
+        addToCart(currentModalProductId, currentModalProductType);
         closeModal();
     }
 }
@@ -429,8 +658,9 @@ function toggleCart() {
 }
 
 // Add to Cart
-function addToCart(productId) {
-    const product = products[currentLang].find(p => p.id === productId);
+function addToCart(productId, type = 'flower') {
+    const dataSource = type === 'drug' ? drugs : products;
+    const product = dataSource[currentLang].find(p => p.id === productId);
     const existingItem = cart.find(item => item.id === productId);
 
     if (existingItem) {
@@ -438,6 +668,7 @@ function addToCart(productId) {
     } else {
         cart.push({
             id: product.id,
+            type: type,
             price: product.price,
             emoji: product.emoji,
             quantity: 1
@@ -480,7 +711,6 @@ function updateCartUI() {
     const cartItems = document.getElementById('cart-items');
     const cartCount = document.getElementById('cart-count');
     const cartTotal = document.getElementById('cart-total');
-    const currentProducts = products[currentLang];
 
     // Update count
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -496,7 +726,8 @@ function updateCartUI() {
         `;
     } else {
         cartItems.innerHTML = cart.map(item => {
-            const product = currentProducts.find(p => p.id === item.id);
+            const dataSource = item.type === 'drug' ? drugs : products;
+            const product = dataSource[currentLang].find(p => p.id === item.id);
             return `
                 <div class="cart-item">
                     <div class="cart-item-image">${item.emoji}</div>

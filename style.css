@@ -352,6 +352,52 @@ h1, h2, h3, h4 {
     transform: scale(1.05);
 }
 
+/* Drugs Section */
+.drugs-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.drugs-section .section-title,
+.drugs-section .section-subtitle {
+    color: #fff;
+}
+
+.drugs-section .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.drugs-section .product-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drugs-section .product-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.drugs-section .product-image {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.drugs-section .product-name,
+.drugs-section .product-price {
+    color: #fff;
+}
+
+.drugs-section .product-description {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.drugs-section .add-to-cart {
+    background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+}
+
+.drugs-section .add-to-cart:hover {
+    background: linear-gradient(135deg, #ff6b6b 0%, #e94560 100%);
+}
+
 /* About Section */
 .about {
     padding: 100px 0;
