@@ -507,7 +507,7 @@ const productsDark = {
             info1: "Amour universel, Envie de danser, Discussions profondes",
             info2: "4-6 heures de love",
             price: 35.00,
-            image: "https://images.unsplash.com/photo-1533709752211-118fcaf03312?w=500"
+            image: "https://pictures.laprovence.com/cdn-cgi/image/width=800,format=auto,quality=80/media/destination-sante/20250117/ce53e5ea90a2c323845fac0c4307de6b6fb4275222c6793abef1517506eba415.jpg"
         },
         {
             id: 104,
@@ -527,7 +527,7 @@ const productsDark = {
             info1: "Connexion nature, Fous rires, Visions mystiques",
             info2: "4-6 heures de magie",
             price: 40.00,
-            image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500"
+            image: "https://media.post.rvohealth.io/wp-content/uploads/2019/02/Psychedelic_Mushrooms_Color-1200x628-Facebook.jpg"
         },
         {
             id: 106,
@@ -557,7 +557,7 @@ const productsDark = {
             info1: "Énergie surhumaine, Productivité maniaque, Paranoïa créative",
             info2: "12-24 heures (minimum)",
             price: 150.00,
-            image: "https://images.unsplash.com/photo-1610552050890-fe99536c2615?w=500"
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXC7CulSf7shJx49z0EXjVUqF7sstN8Dv5aA&s"
         }
     ],
     en: [
@@ -589,7 +589,7 @@ const productsDark = {
             info1: "Universal love, Urge to dance, Deep conversations",
             info2: "4-6 hours of love",
             price: 35.00,
-            image: "https://images.unsplash.com/photo-1533709752211-118fcaf03312?w=500"
+            image: "https://pictures.laprovence.com/cdn-cgi/image/width=800,format=auto,quality=80/media/destination-sante/20250117/ce53e5ea90a2c323845fac0c4307de6b6fb4275222c6793abef1517506eba415.jpg"
         },
         {
             id: 104,
@@ -609,7 +609,7 @@ const productsDark = {
             info1: "Nature connection, Giggles, Mystical visions",
             info2: "4-6 hours of magic",
             price: 40.00,
-            image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500"
+            image: "https://media.post.rvohealth.io/wp-content/uploads/2019/02/Psychedelic_Mushrooms_Color-1200x628-Facebook.jpg"
         },
         {
             id: 106,
@@ -639,7 +639,7 @@ const productsDark = {
             info1: "Superhuman energy, Manic productivity, Creative paranoia",
             info2: "12-24 hours (minimum)",
             price: 150.00,
-            image: "https://images.unsplash.com/photo-1610552050890-fe99536c2615?w=500"
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXC7CulSf7shJx49z0EXjVUqF7sstN8Dv5aA&s"
         }
     ]
 };
