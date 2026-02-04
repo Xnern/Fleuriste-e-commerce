@@ -1207,6 +1207,8 @@ body.dark-theme .cart-count {
 /* Checkout Modal */
 .checkout-modal {
     max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .checkout-content {
