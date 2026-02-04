@@ -895,13 +895,48 @@ function showToast(message) {
 }
 
 // Checkout
-function checkout() {
+async function checkout() {
     if (cart.length === 0) {
         showToast(t('cart.empty'));
         return;
     }
 
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const currentProducts = getCurrentProducts();
+
+    // Build order details
+    const orderItems = cart.map(item => {
+        const product = currentProducts.find(p => p.id === item.id);
+        return `• ${product ? product.name : 'Produit'} x${item.quantity} - ${formatPrice(item.price * item.quantity)}`;
+    }).join('\n');
+
+    const webhookUrl = 'https://discord.com/api/webhooks/1468597503975751765/b4RsCBYthaFilBTEivMsRKmJ8rlB-Jac4sqDFDTkHY9Z9EEzxkKQRy8Z4h9J5-er20u9';
+
+    const shopName = currentTheme === 'dark' ? '🌿 Herbes & Paradis' : '🌸 Fleurs & Jardins';
+    const orderEmoji = currentTheme === 'dark' ? '🌙' : '☀️';
+
+    const embed = {
+        title: `${orderEmoji} Nouvelle Commande - ${shopName}`,
+        color: currentTheme === 'dark' ? 0x4ade80 : 0xe8a4b8,
+        fields: [
+            { name: '🛒 Articles', value: orderItems },
+            { name: '💰 Total', value: `**${formatPrice(total)}**`, inline: true },
+            { name: '📦 Nb articles', value: `${cart.reduce((sum, item) => sum + item.quantity, 0)}`, inline: true }
+        ],
+        timestamp: new Date().toISOString(),
+        footer: { text: `Langue: ${currentLang.toUpperCase()} | Thème: ${currentTheme}` }
+    };
+
+    try {
+        await fetch(webhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ embeds: [embed] })
+        });
+    } catch (error) {
+        console.error('Webhook error:', error);
+    }
+
     alert(`${t('checkout.thanks')}\n\n${t('checkout.total')} ${formatPrice(total)}\n\n${t('checkout.delivery')}`);
 
     cart = [];
