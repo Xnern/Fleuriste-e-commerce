@@ -490,7 +490,17 @@ input:checked + .slider:before {
     gap: 20px;
 }
 
-.contact-form input,
+/* Honeypot - hidden from users, visible to bots */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    pointer-events: none;
+}
+
+.contact-form input:not(.honeypot),
 .contact-form textarea {
     padding: 15px 20px;
     border: 2px solid #eee;

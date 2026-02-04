@@ -136,9 +136,10 @@
                     </div>
                 </div>
                 <form class="contact-form" onsubmit="handleContactForm(event)">
-                    <input type="text" data-i18n-placeholder="contact.form.name" placeholder="Votre nom" required>
-                    <input type="email" data-i18n-placeholder="contact.form.email" placeholder="Votre email" required>
-                    <textarea data-i18n-placeholder="contact.form.message" placeholder="Votre message" rows="5" required></textarea>
+                    <input type="text" name="website" class="honeypot" autocomplete="off" tabindex="-1">
+                    <input type="text" id="contact-name" data-i18n-placeholder="contact.form.name" placeholder="Votre nom" required minlength="2" maxlength="100">
+                    <input type="email" id="contact-email" data-i18n-placeholder="contact.form.email" placeholder="Votre email" required maxlength="100">
+                    <textarea id="contact-message" data-i18n-placeholder="contact.form.message" placeholder="Votre message" rows="5" required minlength="10" maxlength="1000"></textarea>
                     <button type="submit" class="btn btn-primary" data-i18n="contact.form.send">Envoyer</button>
                 </form>
             </div>
@@ -205,10 +206,10 @@
             <h2 class="checkout-title" data-i18n="checkout.modal.title">Finaliser la commande</h2>
             <div class="checkout-summary" id="checkout-summary"></div>
             <form class="checkout-form" onsubmit="confirmOrder(event)">
-                <input type="text" id="checkout-name" placeholder="Nom complet" required>
-                <input type="email" id="checkout-email" placeholder="Email" required>
-                <input type="tel" id="checkout-phone" placeholder="Téléphone" required>
-                <textarea id="checkout-address" placeholder="Adresse de livraison" rows="3" required></textarea>
+                <input type="text" id="checkout-name" placeholder="Nom complet" required minlength="2" maxlength="100" autocomplete="name">
+                <input type="email" id="checkout-email" placeholder="Email" required maxlength="100" autocomplete="email">
+                <input type="tel" id="checkout-phone" placeholder="Téléphone" required minlength="5" maxlength="20" autocomplete="tel">
+                <textarea id="checkout-address" placeholder="Adresse de livraison" rows="3" required minlength="10" maxlength="300"></textarea>
                 <div class="checkout-total-box">
                     <span data-i18n="cart.total">Total:</span>
                     <span id="checkout-total-display" class="checkout-total-amount"></span>

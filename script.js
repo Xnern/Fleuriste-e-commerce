@@ -650,6 +650,43 @@ let currentTheme = localStorage.getItem('theme') || 'light';
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 let currentModalProductId = null;
 
+// Security: Rate limiting
+const rateLimiter = {
+    lastSubmit: 0,
+    minInterval: 30000, // 30 seconds between submissions
+    canSubmit: function() {
+        const now = Date.now();
+        if (now - this.lastSubmit < this.minInterval) {
+            return false;
+        }
+        this.lastSubmit = now;
+        return true;
+    }
+};
+
+// Security: Sanitize input to prevent XSS
+function sanitizeInput(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML.trim();
+}
+
+// Security: Validate email format
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// Security: Get webhook URL (light obfuscation)
+function getWebhookUrl() {
+    const parts = ['aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkv', 'd2ViaG9va3MvMTQ2ODU5NzUwMzk3NTc1', 'MTc2NS9iNFJzQ0JZdGhhRmlsQlRFaXZN', 'c1JLbUo4cmxCLUphYzRzcURGRFRrSFk5', 'WjlaRUV6a0tRUnk4WjRoOUo1LWVyMjB1OQ=='];
+    try {
+        return atob(parts.join(''));
+    } catch(e) {
+        return null;
+    }
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('theme-toggle').checked = currentTheme === 'dark';
@@ -1003,10 +1040,34 @@ function closeCheckoutModal() {
 async function confirmOrder(event) {
     event.preventDefault();
 
-    const name = document.getElementById('checkout-name').value;
-    const email = document.getElementById('checkout-email').value;
-    const phone = document.getElementById('checkout-phone').value;
-    const address = document.getElementById('checkout-address').value;
+    // Security: Rate limiting
+    if (!rateLimiter.canSubmit()) {
+        showToast(currentLang === 'fr' ? 'Veuillez patienter' : 'Please wait');
+        return;
+    }
+
+    const name = sanitizeInput(document.getElementById('checkout-name').value);
+    const email = sanitizeInput(document.getElementById('checkout-email').value);
+    const phone = sanitizeInput(document.getElementById('checkout-phone').value);
+    const address = sanitizeInput(document.getElementById('checkout-address').value);
+
+    // Security: Validate inputs
+    if (name.length < 2 || name.length > 100) {
+        showToast(currentLang === 'fr' ? 'Nom invalide' : 'Invalid name');
+        return;
+    }
+    if (!isValidEmail(email)) {
+        showToast(currentLang === 'fr' ? 'Email invalide' : 'Invalid email');
+        return;
+    }
+    if (phone.length < 5 || phone.length > 20) {
+        showToast(currentLang === 'fr' ? 'Téléphone invalide' : 'Invalid phone');
+        return;
+    }
+    if (address.length < 10 || address.length > 300) {
+        showToast(currentLang === 'fr' ? 'Adresse invalide' : 'Invalid address');
+        return;
+    }
 
     const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
     const currentProducts = getCurrentProducts();
@@ -1017,7 +1078,15 @@ async function confirmOrder(event) {
         return `• ${product ? product.name : 'Produit'} x${item.quantity} - ${formatPrice(item.price * item.quantity)}`;
     }).join('\n');
 
-    const webhookUrl = 'https://discord.com/api/webhooks/1468597503975751765/b4RsCBYthaFilBTEivMsRKmJ8rlB-Jac4sqDFDTkHY9Z9EEzxkKQRy8Z4h9J5-er20u9';
+    const webhookUrl = getWebhookUrl();
+    if (!webhookUrl) {
+        closeCheckoutModal();
+        showToast(t('checkout.thanks'));
+        cart = [];
+        saveCart();
+        updateCartUI();
+        return;
+    }
 
     const shopName = currentTheme === 'dark' ? '🌿 Herbes & Paradis' : '🌸 Fleurs & Jardins';
     const orderEmoji = currentTheme === 'dark' ? '🌙' : '☀️';
@@ -1061,11 +1130,45 @@ async function handleContactForm(event) {
     event.preventDefault();
 
     const form = event.target;
-    const name = form.querySelector('input[type="text"]').value;
-    const email = form.querySelector('input[type="email"]').value;
-    const message = form.querySelector('textarea').value;
 
-    const webhookUrl = 'https://discord.com/api/webhooks/1468597503975751765/b4RsCBYthaFilBTEivMsRKmJ8rlB-Jac4sqDFDTkHY9Z9EEzxkKQRy8Z4h9J5-er20u9';
+    // Security: Check honeypot (bot detection)
+    const honeypot = form.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value !== '') {
+        console.log('Bot detected');
+        form.reset();
+        return;
+    }
+
+    // Security: Rate limiting
+    if (!rateLimiter.canSubmit()) {
+        showToast(currentLang === 'fr' ? 'Veuillez patienter avant de renvoyer un message' : 'Please wait before sending another message');
+        return;
+    }
+
+    const name = sanitizeInput(document.getElementById('contact-name').value);
+    const email = sanitizeInput(document.getElementById('contact-email').value);
+    const message = sanitizeInput(document.getElementById('contact-message').value);
+
+    // Security: Validate inputs
+    if (name.length < 2 || name.length > 100) {
+        showToast(currentLang === 'fr' ? 'Nom invalide' : 'Invalid name');
+        return;
+    }
+    if (!isValidEmail(email)) {
+        showToast(currentLang === 'fr' ? 'Email invalide' : 'Invalid email');
+        return;
+    }
+    if (message.length < 10 || message.length > 1000) {
+        showToast(currentLang === 'fr' ? 'Message trop court ou trop long' : 'Message too short or too long');
+        return;
+    }
+
+    const webhookUrl = getWebhookUrl();
+    if (!webhookUrl) {
+        showToast(t('message.sent'));
+        form.reset();
+        return;
+    }
 
     const shopName = currentTheme === 'dark' ? '🌿 Herbes & Paradis' : '🌸 Fleurs & Jardins';
 
