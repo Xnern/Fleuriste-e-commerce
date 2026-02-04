@@ -34,7 +34,11 @@ const translations = {
             // Contact
             "contact.title": "Contactez-nous",
             "contact.address": "Adresse",
+            "contact.address.value": "123 Rue des Fleurs, 75001 Paris",
             "contact.phone": "Téléphone",
+            "contact.phone.value": "01 23 45 67 89",
+            "contact.email": "Email",
+            "contact.email.value": "contact@fleurs-jardins.fr",
             "contact.hours": "Horaires",
             "contact.hours.value": "Lun-Sam: 9h-19h",
             "contact.form.name": "Votre nom",
@@ -43,6 +47,7 @@ const translations = {
             "contact.form.send": "Envoyer",
 
             // Footer
+            "footer.title": "🌸 Fleurs & Jardins",
             "footer.description": "Votre fleuriste artisanal depuis 2004. Des fleurs fraîches pour tous vos moments précieux.",
             "footer.quicklinks": "Liens Rapides",
             "footer.followus": "Suivez-nous",
@@ -109,7 +114,11 @@ const translations = {
             // Contact
             "contact.title": "Contactez-nous",
             "contact.address": "Point de rendez-vous",
+            "contact.address.value": "Derrière le Kebab, Ruelle Sombre",
             "contact.phone": "Signal/Telegram",
+            "contact.phone.value": "@herbs_paradise_dealer",
+            "contact.email": "Email sécurisé",
+            "contact.email.value": "contact@protonmail.com",
             "contact.hours": "Disponibilité",
             "contact.hours.value": "24/7 (on dort jamais)",
             "contact.form.name": "Votre pseudo",
@@ -118,6 +127,7 @@ const translations = {
             "contact.form.send": "Envoyer (crypté)",
 
             // Footer
+            "footer.title": "🌿 Herbes & Paradis",
             "footer.description": "Votre herboriste de confiance depuis l'Antiquité. Des plantes naturelles pour tous vos voyages intérieurs.",
             "footer.quicklinks": "Liens Rapides",
             "footer.followus": "Suivez-nous (discrètement)",
@@ -185,7 +195,11 @@ const translations = {
             // Contact
             "contact.title": "Contact Us",
             "contact.address": "Address",
+            "contact.address.value": "123 Flower Street, 75001 Paris",
             "contact.phone": "Phone",
+            "contact.phone.value": "+33 1 23 45 67 89",
+            "contact.email": "Email",
+            "contact.email.value": "contact@fleurs-jardins.fr",
             "contact.hours": "Hours",
             "contact.hours.value": "Mon-Sat: 9am-7pm",
             "contact.form.name": "Your name",
@@ -194,6 +208,7 @@ const translations = {
             "contact.form.send": "Send",
 
             // Footer
+            "footer.title": "🌸 Fleurs & Jardins",
             "footer.description": "Your artisan florist since 2004. Fresh flowers for all your precious moments.",
             "footer.quicklinks": "Quick Links",
             "footer.followus": "Follow Us",
@@ -260,7 +275,11 @@ const translations = {
             // Contact
             "contact.title": "Contact Us",
             "contact.address": "Meeting point",
+            "contact.address.value": "Behind the Kebab, Dark Alley",
             "contact.phone": "Signal/Telegram",
+            "contact.phone.value": "@herbs_paradise_dealer",
+            "contact.email": "Secure Email",
+            "contact.email.value": "contact@protonmail.com",
             "contact.hours": "Availability",
             "contact.hours.value": "24/7 (we never sleep)",
             "contact.form.name": "Your alias",
@@ -269,6 +288,7 @@ const translations = {
             "contact.form.send": "Send (encrypted)",
 
             // Footer
+            "footer.title": "🌿 Herbs & Paradise",
             "footer.description": "Your trusted herbalist since Antiquity. Natural plants for all your inner journeys.",
             "footer.quicklinks": "Quick Links",
             "footer.followus": "Follow Us (discreetly)",
